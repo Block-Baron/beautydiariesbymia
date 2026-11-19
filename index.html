@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Beautydiariesbymia — the full step-by-step Peachy Bronze Glow Makeup tutorial: warm bronzer, juicy peach blush and golden shimmer, from fresh prepped skin to the finished glow." />
+<meta name="description" content="Beautydiariesbymia — full step-by-step makeup tutorials: the newest Soft Glam Makeup Look with soft brown eyes and peachy blush, plus Peachy Bronze Glow Makeup, from fresh prepped skin to the finished glow." />
 <link rel="icon" href="data:," />
 <title>Beauty Diaries by Mia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -310,8 +310,8 @@
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 style="font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 6px;font-weight:800">The tutorial</h2>
-          <p>Tap the photo or card — it opens the tutorial's own page, right here in this tab, with the full how-to, pretty photos to guide you, and every little detail from the first step to the final glow.</p>
+          <h2 style="font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 6px;font-weight:800">The tutorials</h2>
+          <p>The newest look is first, gorgeous. Tap the photo or card — it opens the tutorial's own page, right here in this tab, with the full how-to, pretty photos to guide you, and every little detail from the first step to the final glow.</p>
         </div>
       </div>
       <div class="grid" id="grid"></div>
@@ -324,7 +324,7 @@
   <!-- ARTICLE PAGE (opens in the same tab) -->
   <section class="article" id="articleView" aria-live="polite" hidden>
     <div class="wrap">
-      <a class="back-btn" href="#/">← Back to the tutorial</a>
+      <a class="back-btn" href="#/">← Back to the tutorials</a>
       <div id="articleBody"></div>
 
     </div>
@@ -370,6 +370,35 @@ var PINTEREST = "https://www.pinterest.com/beautydiariesbymia/";
 
 var ARTICLES = [
   {
+    id: "soft-glam-makeup-look",
+    newest: true,
+    title: "Soft Glam Makeup Look",
+    category: "Makeup Looks",
+    cat: "makeup",
+    time: "18 min",
+    level: "Easy",
+    blurb: "Soft brown eyes, peachy blush and a glossy nude lip — polished, romantic glam that still looks like you, just softer, smoother and glowier.",
+    intro: "This is the look to reach for when you want to feel truly put-together without looking heavily made up: luminous skin, soft brown eyes that make your own eye colour glow, peachy blush melted high on the cheeks and a glossy nude lip that goes with everything. The three photos show this exact look from the very start — fresh, prepped, glowing skin — through the middle, with the soft brown eyeshadow and peachy blush going on, to the finished ending, which is the photo you saw on the pin. Follow the photos as you go and you will land in the same soft, romantic place: glam, but gentle; polished, but still you.",
+    images: [
+      {src:"assets/img-12.jpg", cap:"Photo 1 · Start — fresh, prepped skin glowing with moisturiser and glow primer, before any colour", alt:"Watercolor portrait of Mia at the start of the soft glam look, fresh bare glowing skin with her hands gently on her cheeks, moisturiser jar and glow primer bottle beside her"},
+      {src:"assets/img-13.jpg", cap:"Photo 2 · Middle — soft glam going on: soft brown eyeshadow blended on the lids and peachy blush swept onto the cheek", alt:"Watercolor portrait of Mia in the middle of the soft glam look, sweeping peachy blush onto her cheek with a fluffy brush, soft brown eyeshadow already on her lids, brown eyeshadow palette and peach blush compact beside her"},
+      {src:"assets/img-14.jpg", cap:"Photo 3 · Ending — the finished soft glam look, the photo from the pin", alt:"Watercolor portrait of Mia with the finished soft glam look, luminous skin, soft brown smoky eyes, peachy blush, champagne highlight and glossy nude lips, framed by soft pink flowers"}
+    ],
+    needs: ["Moisturiser + SPF", "Glow primer", "Luminous skin tint or light foundation", "Creamy concealer", "Soft brown eyeshadow palette — matte and satin shades", "Peachy blush — cream or powder", "Soft bronzer", "Brown eyeliner pencil", "Black mascara", "Champagne highlighter", "Nude lip liner + nude gloss", "Fluffy blending brush + blush brush", "Dewy setting spray"],
+    steps: [
+      {t:"Prep for that lit-from-within glow", d:"This is the start photo: clean skin, moisturiser massaged in until your cheeks feel bouncy, then glow primer pressed over the cheeks, forehead and nose with your fingertips. Give it a full minute to settle. Soft glam lives or dies on this base — well-prepped skin is what lets a light layer of makeup look smooth, fresh and expensive instead of heavy.", time:"2 min"},
+      {t:"Luminous base, kept light", d:"Buff a thin layer of luminous skin tint from the centre of the face outward, keeping it sheer so your real skin still shows through. Dot creamy concealer only where you want brightness — under the eyes, around the nose, a touch on the chin — and blend the edges away with a damp sponge. Set just the T-zone with the lightest dusting of powder, and leave the cheeks completely powder-free so the glow survives.", time:"3 min"},
+      {t:"Soft warmth and gentle shape", d:"Sweep soft bronzer through the hairline, under the cheekbones and along the jaw with a big fluffy brush, blending in soft circles so there are never any lines. This is not contour — it is warmth and the gentlest shape, the frame that lets the blush and eyes do the pretty work.", time:"2 min"},
+      {t:"The soft brown eye — matte first", d:"Now the middle photo begins. Wash a light matte taupe-brown over the whole lid as your base, then blend a medium soft brown into the crease in small windscreen-wiper motions, keeping the colour low and diffused. Run the same medium brown softly along the lower lash line. Everything should look like shadow, not stripes — if you can see where a shade starts, blend it a little more.", time:"3 min"},
+      {t:"Depth at the lashes, satin on the lid", d:"Press the deepest brown in your palette right along the upper lash line with a small flat brush, then soften it upward so it melts into the crease colour. Tap a satin champagne-brown onto the centre of the lid with a fingertip — that quiet sheen is what makes soft glam catch the light when you blink, without a single speck of glitter.", time:"2 min"},
+      {t:"Peachy blush, high and melted", d:"Smile gently and place peachy blush on the apples of the cheeks, then sweep it upward toward the temples so it lifts the whole face. Blend it into the bronzer until the two become one soft wash of colour — this melted overlap is the heart of the look. Build it in two light layers; peachy blush should look like you are naturally flushed and happy, never painted on.", time:"2 min"},
+      {t:"Soft liner, fluttery lashes, groomed brows", d:"Run the brown pencil in tiny strokes between your upper lashes — tight to the roots, never a thick line — and smudge it straight away for that soft, smoky edge. Curl your lashes and add two coats of mascara, wiggling at the roots for fullness. Brush your brows up and fill only the sparse spots with light strokes; soft glam brows stay feathery, never carved.", time:"2 min"},
+      {t:"The glossy nude lip and the final glow", d:"This is the ending photo. Line just on your natural lip edge with the nude liner and soften it inward with a fingertip, then add nude gloss through the centre of the lips so they look full and juicy. Tap champagne highlighter onto the tops of the cheekbones, the inner corners of the eyes and the cupid's bow, then mist dewy setting spray in an X and T. Check yourself in daylight: soft brown eyes, peachy cheeks, glowing skin — that is the finished soft glam.", time:"2 min"}
+    ],
+    tips: ["Blend longer than feels necessary. Soft glam has no hard edges anywhere — eyes, blush, bronzer and lips should all look diffused, like they were airbrushed on.", "Keep the whole look in one warm, soft family: browns on the eyes, peach on the cheeks, nude on the lips. One harsh black liner or cool grey shadow and the softness disappears.", "Do the eyes before your base if fallout worries you — you can wipe the under-eyes clean and lay down a perfect, fresh base afterwards."],
+    avoid: ["Heavy foundation. Thick coverage fights the whole idea of this look; sheer layers that let skin show through are what read as soft glam.", "A sharp black wing. It turns the look from soft to dramatic in one stroke — smudged brown at the roots gives the same definition, gently.", "Blush placed too low. Low, round blush drags the face down; high and swept toward the temples is what gives that lifted, romantic finish."]
+  },
+  {
     id: "peachy-bronze-glow",
     title: "Peachy Bronze Glow Makeup",
     category: "Makeup Looks",
@@ -414,7 +443,7 @@ var BOARDS = [
 
 
 function cardHTML(a){
-  var hot = a.hot ? '<span class="tag hot">Trending on Pinterest</span>' : '';
+  var hot = a.newest ? '<span class="tag hot">Newest tutorial</span>' : (a.hot ? '<span class="tag hot">Trending on Pinterest</span>' : '');
   return '<a class="card" href="#/look/'+a.id+'" aria-label="Open tutorial: '+a.title+'">'
     + '<span class="thumb"><img src="'+a.images[0].src+'" alt="'+a.images[0].alt+'" loading="lazy" /><span class="thumb-cta">Open tutorial →</span></span>'
     + '<span class="card-body">'
