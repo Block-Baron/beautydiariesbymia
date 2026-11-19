@@ -203,8 +203,12 @@
   .avoid-box h3{margin:0 0 10px;font-size:1rem}
   .avoid-box ul{margin:0;padding-left:20px;color:var(--muted);font-size:.95rem}
   .avoid-box li{margin:5px 0}
-  .related{margin-top:38px}
-  .related h3{font-family:"Playfair Display",serif;font-size:1.4rem;margin:0 0 16px}
+  .related{margin-top:48px;padding-top:34px;border-top:1px solid var(--line)}
+  .related-head{margin-bottom:18px}
+  .related-head h3{font-family:"Playfair Display",serif;font-size:1.55rem;margin:0 0 6px;font-weight:800}
+  .related-head p{color:var(--muted);margin:0;font-size:.95rem;max-width:36rem}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:620px){ .related-grid{grid-template-columns:1fr} }
 
   /* boards */
   .boards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
@@ -657,6 +661,11 @@ function renderArticle(id){
   var steps = a.steps.map(function(s){
     return '<li class="step"><span class="step-num" aria-hidden="true"></span><div><h3>'+s.t+'</h3><p>'+s.d+'</p><span class="time">'+s.time+'</span></div></li>';
   }).join("");
+  var others = ARTICLES.filter(function(x){ return x.id !== a.id; });
+  var sameCat = others.filter(function(x){ return x.cat === a.cat; });
+  var diffCat = others.filter(function(x){ return x.cat !== a.cat; });
+  var suggested = sameCat.concat(diffCat).slice(0,3);
+  var relatedCards = suggested.map(cardHTML).join("");
   var html = ''
     + '<div class="art-head"><span class="tag">'+a.category+'</span>'
     + '<h2>'+a.title+'</h2><p class="intro">'+a.intro+'</p></div>'
@@ -671,7 +680,8 @@ function renderArticle(id){
     + '<div><ol class="steps">'+steps+'</ol>'
     + '<div class="tip-box"><h3>Mia\u2019s tips</h3><ul>'+a.tips.map(function(t){return "<li>"+t+"</li>";}).join("")+'</ul></div>'
     + '<div class="avoid-box"><h3>Skip these mistakes</h3><ul>'+a.avoid.map(function(t){return "<li>"+t+"</li>";}).join("")+'</ul></div>'
-    + '</div></div>';
+    + '</div></div>'
+    + '<div class="related"><div class="related-head"><h3>You might also love</h3><p>Three more looks to try next — tap any one to open its full tutorial, photos and steps.</p></div><div class="related-grid">'+relatedCards+'</div></div>';
   document.getElementById("articleBody").innerHTML = html;
 
   var thumbs = document.querySelectorAll(".gal-thumb");
