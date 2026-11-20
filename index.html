@@ -72,8 +72,8 @@
   .stat b{font-family:"Playfair Display",serif;font-size:1.5rem;display:block;line-height:1.1}
   .stat span{font-size:.82rem;color:var(--muted);font-weight:600}
   .hero-art{position:relative}
-  .hero-art .frame{display:block;position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--surface);text-decoration:none}
-  .hero-art .frame img{width:100%;height:520px;object-fit:cover;object-position:top center;transition:transform .6s ease}
+  .hero-art .frame{display:block;position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--surface);text-decoration:none;aspect-ratio:4/5}
+  .hero-art .frame img{width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform .6s ease}
   .hero-art .frame:hover img{transform:scale(1.05)}
   .frame-cta{position:absolute;left:50%;bottom:18px;transform:translateX(-50%) translateY(8px);background:var(--rose);color:#fff;font-weight:800;font-size:.88rem;padding:10px 18px;border-radius:999px;white-space:nowrap;opacity:0;transition:opacity .25s ease,transform .25s ease;box-shadow:var(--shadow)}
   @media (prefers-color-scheme: dark){ .frame-cta{color:#2a121b} }
@@ -184,8 +184,8 @@
   .cat-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:left;padding:0;display:flex;flex-direction:column;width:100%;box-shadow:0 6px 18px rgba(126,31,59,.05);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
   .cat-tile:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--rose-soft)}
   .cat-tile[aria-pressed="true"]{border-color:var(--rose);box-shadow:0 0 0 2px var(--rose-soft),var(--shadow)}
-  .cat-tile .c-thumb{aspect-ratio:16/9;overflow:hidden;background:var(--surface-2);display:block}
-  .cat-tile .c-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .55s ease}
+  .cat-tile .c-thumb{aspect-ratio:3/2;overflow:hidden;background:var(--surface-2);display:block}
+  .cat-tile .c-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform .55s ease}
   .cat-tile:hover .c-thumb img{transform:scale(1.06)}
   .cat-tile .c-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:5px;flex:1}
   .cat-tile h3{font-family:"Playfair Display",serif;font-size:1.22rem;margin:0;font-weight:700}
@@ -282,7 +282,8 @@
     .trend-row{grid-template-columns:repeat(2,1fr)}
     .boards{grid-template-columns:repeat(3,1fr)}
     .hero-grid{grid-template-columns:1fr;gap:30px}
-    .hero-art .frame img{height:440px}
+    .hero-art .frame{aspect-ratio:4/5;max-width:540px;margin:0 auto;width:100%}
+    .hero-art .frame img{height:100%}
     .fc-1{left:8px}.fc-2{right:8px}
     .art-cols{grid-template-columns:1fr}
     .need-box{position:static}
@@ -882,12 +883,12 @@ var BOARDS = [
 
 /* ---- categories: the same sections as Mia's Pinterest boards ---- */
 var CATEGORIES = [
-  {key:"makeup", name:"Makeup Looks", img:"assets/img-59.jpg", alt:"Photograph of Mia with the finished soft glam makeup look", desc:"Soft glam, glossy lips and golden-hour glow — the full face tutorials, every step in order.", match:function(a){ return a.category==="Makeup Looks"; }},
-  {key:"hair", name:"Hairstyles", img:"assets/img-44.jpg", alt:"Photograph of Mia with the finished Hollywood waves hairstyle", desc:"Waves and more styles built section by section — the hair looks from Mia's Hairstyles board.", match:function(a){ return a.cat==="hair"; }},
-  {key:"skincare", name:"Skincare & Glow", img:"assets/img-56.jpg", alt:"Photograph of Mia with glowing skin at the end of the morning skincare ritual", desc:"Gentle routines in the right order — cleanse, treat, moisturise, SPF — for skin that truly glows.", match:function(a){ return a.cat==="skincare"; }},
-  {key:"nails", name:"Nail Art Ideas", img:"assets/img-50.jpg", alt:"Photograph of Mia showing the finished glossy nude manicure", desc:"Clean, pretty manicures you can genuinely do at home — shapes, shades and salon edges.", match:function(a){ return a.cat==="nails"; }},
-  {key:"fashion", name:"Fashion & Outfits", img:"assets/img-41.jpg", alt:"Photograph of Mia in the finished champagne satin slip dress look", desc:"Chic fashion and everyday outfits — simple formulas styled piece by piece until they sing.", match:function(a){ return a.category==="Chic Fashion" || a.category==="Everyday Outfits"; }},
-  {key:"party", name:"Party & Date Night Looks", img:"assets/img-47.jpg", alt:"Photograph of Mia with the finished gold shimmer party eye look", desc:"Glow-ups for going out — shimmer, shine and the looks that catch every light in the room.", match:function(a){ return a.category==="Party & Date Night Looks"; }}
+  {key:"makeup", name:"Makeup Looks", img:"assets/img-80.jpg", alt:"Photograph of Mia with a full soft glam makeup look, her complete face in frame", desc:"Soft glam, glossy lips and golden-hour glow — the full face tutorials, every step in order.", match:function(a){ return a.category==="Makeup Looks"; }},
+  {key:"hair", name:"Hairstyles", img:"assets/img-81.jpg", alt:"Photograph of Mia in profile showing long wavy hair, her full head and waves in frame", desc:"Waves and more styles built section by section — the hair looks from Mia's Hairstyles board.", match:function(a){ return a.cat==="hair"; }},
+  {key:"skincare", name:"Skincare & Glow", img:"assets/img-82.jpg", alt:"Photograph of Mia with fresh glowing skin, her full face in frame", desc:"Gentle routines in the right order — cleanse, treat, moisturise, SPF — for skin that truly glows.", match:function(a){ return a.cat==="skincare"; }},
+  {key:"nails", name:"Nail Art Ideas", img:"assets/img-83.jpg", alt:"Close-up photograph of hands with beautiful manicured nail art, hands only with no face", desc:"Clean, pretty manicures you can genuinely do at home — shapes, shades and salon edges.", match:function(a){ return a.cat==="nails"; }},
+  {key:"fashion", name:"Fashion & Outfits", img:"assets/img-84.jpg", alt:"Photograph of Mia in a full everyday outfit, cream knit sweater and blue jeans, shown head to toe", desc:"Chic fashion and everyday outfits — simple formulas styled piece by piece until they sing.", match:function(a){ return a.category==="Chic Fashion" || a.category==="Everyday Outfits"; }},
+  {key:"party", name:"Party & Date Night Looks", img:"assets/img-85.jpg", alt:"Photograph of Mia in a glamorous evening party look, full upper body in a black sequin dress", desc:"Glow-ups for going out — shimmer, shine and the looks that catch every light in the room.", match:function(a){ return a.category==="Party & Date Night Looks"; }}
 ];
 function catByKey(key){
   for (var i=0;i<CATEGORIES.length;i++){ if (CATEGORIES[i].key===key) return CATEGORIES[i]; }
