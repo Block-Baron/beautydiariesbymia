@@ -4,7 +4,15 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Beautydiariesbymia — full step-by-step beauty tutorials: Lavender Floral Nail Art, Fuller Lips Lip Liner Trick, Silver Sequin Mini Dress, Plum Berry Fall Makeup, Bubble Braid Hairstyle, Pleated Midi Skirt and Fitted Knit Top, Rose Gold Lip Gloss Set, Champagne Satin Slip Dress, Hollywood Waves, Gold Shimmer Party Eye Makeup, Glossy Nude Manicure, Simple Chic Everyday Outfit, Morning Glow Skincare Ritual, Soft Glam Makeup Look and Peachy Bronze Glow Makeup, each from the very start to the finished look." />
+<meta name="description" content="Beauty Diaries by Mia — the full step-by-step beauty tutorials behind the Pinterest pins: makeup looks, hairstyles, skincare routines, nail art and outfit styling, each shown from the very start to the finished look with photos, product lists and honest tips." />
+<meta name="theme-color" content="#fdf9f6" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1c1417" media="(prefers-color-scheme: dark)" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Beauty Diaries by Mia" />
+<meta property="og:title" content="Beauty Diaries by Mia — full step-by-step beauty tutorials" />
+<meta property="og:description" content="The full how-to behind every Mia pin: makeup, hairstyles, skincare, nails and outfits, from the first step to the finished look." />
+<meta property="og:image" content="https://beautydiariesbymia.vercel.app/assets/peachy-bronze-end.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:," />
 <title>Beauty Diaries by Mia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,11 +74,6 @@
   h1 em{color:var(--rose);font-style:italic}
   .hero p.lede{font-size:1.13rem;color:var(--muted);max-width:34rem;margin:0 0 26px}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-  .hero-stats{display:flex;gap:0;margin-top:34px;border-top:1px solid var(--line);padding-top:20px;flex-wrap:wrap}
-  .stat{padding-right:26px;margin-right:26px;border-right:1px solid var(--line)}
-  .stat:last-child{border-right:0;margin-right:0;padding-right:0}
-  .stat b{font-family:"Playfair Display",serif;font-size:1.5rem;display:block;line-height:1.1}
-  .stat span{font-size:.82rem;color:var(--muted);font-weight:600}
   .hero-art{position:relative}
   .hero-art .frame{display:block;position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--surface);text-decoration:none;aspect-ratio:4/5}
   .hero-art .frame img{width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform .6s ease}
@@ -79,14 +82,6 @@
   @media (prefers-color-scheme: dark){ .frame-cta{color:#2a121b} }
   .hero-art .frame:hover .frame-cta,.hero-art .frame:focus-visible .frame-cta{opacity:1;transform:translateX(-50%) translateY(0)}
   @media (hover:none){ .frame-cta{opacity:1;transform:translateX(-50%) translateY(0)} }
-  .float-card{position:absolute;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:12px 16px;font-size:.85rem;font-weight:700;max-width:230px;text-decoration:none;color:var(--ink);transition:transform .2s ease,border-color .2s ease}
-  a.float-card:hover{transform:translateY(-4px);border-color:var(--rose)}
-  a.float-card:hover b{color:var(--rose)}
-  .float-card small{display:block;color:var(--muted);font-weight:600;margin-top:2px}
-  .fc-1{left:-26px;bottom:88px}
-  .fc-2{right:-14px;top:52px}
-  .fc-2 b{color:var(--rose)}
-
   /* how it works */
   .how{padding:26px 0 8px}
   .how-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow)}
@@ -109,9 +104,6 @@
   .chip[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
   .chip[aria-pressed="true"]:hover{color:#fff;background:var(--rose-deep)}
   @media (prefers-color-scheme: dark){ .chip[aria-pressed="true"]{color:#2a121b} }
-  .search{margin-left:auto;flex:1 1 220px;max-width:320px}
-  .search input{width:100%;min-height:44px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);padding:10px 18px;font:inherit;font-size:.95rem}
-  .search input:focus{outline:2px solid var(--rose);outline-offset:1px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:left;padding:0;display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(126,31,59,.05);transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;width:100%;text-decoration:none;color:inherit;cursor:pointer}
   .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--rose-soft)}
@@ -136,21 +128,6 @@
   .card-meta .go{margin-left:auto;color:var(--rose);transition:transform .18s ease}
   .card:hover .card-meta .go{transform:translateX(4px)}
 
-  /* trending strip */
-  .trend{padding:34px 0 4px}
-  .trend-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
-  .trend-head h2{font-family:"Playfair Display",serif;font-size:1.55rem;margin:0;font-weight:800}
-  .trend-head p{color:var(--muted);margin:0;font-size:.95rem}
-  .trend-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .trend-item{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-  .trend-item:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--rose-soft)}
-  .trend-item .t-thumb{aspect-ratio:4/5;overflow:hidden;background:var(--surface-2)}
-  .trend-item .t-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .55s ease}
-  .trend-item:hover .t-thumb img{transform:scale(1.07)}
-  .trend-item .t-body{padding:12px 14px 14px}
-  .trend-item h3{font-family:"Playfair Display",serif;font-size:1.02rem;line-height:1.3;margin:6px 0 2px;font-weight:700;transition:color .18s ease}
-  .trend-item:hover h3{color:var(--rose)}
-  .trend-item .t-meta{color:var(--faint);font-size:.8rem;font-weight:700}
   .empty{display:none;background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:34px;text-align:center;color:var(--muted)}
   .empty.show{display:block}
 
@@ -211,7 +188,8 @@
   .art-meta{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 24px}
   .art-meta span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.85rem;font-weight:700}
   .gallery{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-bottom:30px}
-  .gal-main{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--surface-2);cursor:pointer;position:relative}
+  .gal-main{display:block;width:100%;padding:0;font:inherit;text-align:left;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--surface-2);cursor:pointer;position:relative}
+  .art-head h2:focus{outline:none}
   .gal-main img{width:100%;height:100%;min-height:320px;object-fit:cover;transition:transform .6s ease}
   .gal-main:hover img{transform:scale(1.04)}
   .gal-main .gal-hint{position:absolute;right:12px;bottom:12px;background:rgba(20,10,14,.72);color:#fff;font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;opacity:0;transition:opacity .25s ease;pointer-events:none}
@@ -279,28 +257,21 @@
 
   @media (max-width:960px){
     .grid{grid-template-columns:repeat(2,1fr)}
-    .trend-row{grid-template-columns:repeat(2,1fr)}
     .boards{grid-template-columns:repeat(3,1fr)}
     .hero-grid{grid-template-columns:1fr;gap:30px}
     .hero-art .frame{aspect-ratio:4/5;max-width:540px;margin:0 auto;width:100%}
     .hero-art .frame img{height:100%}
-    .fc-1{left:8px}.fc-2{right:8px}
     .art-cols{grid-template-columns:1fr}
     .need-box{position:static}
   }
   @media (max-width:620px){
     .nav-in{flex-wrap:wrap;gap:6px}
     .nav-links{margin-left:0;width:100%;justify-content:space-between}
-    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .stat{padding-right:0;margin-right:0;border-right:0}
-    .stat b{font-size:1.3rem}
     .grid{grid-template-columns:1fr}
-    .trend-row{grid-template-columns:repeat(2,1fr)}
     .how-steps{grid-template-columns:1fr}
     .boards{grid-template-columns:repeat(2,1fr)}
     .gallery{grid-template-columns:1fr}
     .gal-side{grid-template-columns:1fr 1fr}
-    .search{max-width:none;margin-left:0}
     .nav-links a{padding:10px 8px;font-size:.86rem}
     .brand{font-size:1.08rem}
     .hero{padding-top:34px}
@@ -316,7 +287,7 @@
     <nav class="nav-links" aria-label="Site">
       <a href="#/" data-goto="search">Search</a>
       <a href="#/" data-goto="categories">Categories</a>
-      <a href="#/" data-goto="tutorials">Tutorial</a>
+      <a href="#/" data-goto="tutorials">Tutorials</a>
       <a href="#/" data-goto="how">How it works</a>
       <a href="#/" data-goto="boards">Boards</a>
       <a href="https://www.pinterest.com/beautydiariesbymia/">Pinterest ↗</a>
@@ -339,7 +310,7 @@
         </div>
       </div>
       <div class="hero-art">
-        <a class="frame" href="#/look/peachy-bronze-glow" aria-label="Open the Peachy Bronze Glow Makeup tutorial"><img src="assets/img-36.jpg" alt="Photograph of Mia with the finished peachy bronze glow look, bronzed skin, peach blush, copper eyes and glossy peach lips" /><span class="frame-cta">Open the peachy bronze tutorial →</span></a>
+        <a class="frame" href="#/look/peachy-bronze-glow" aria-label="Open the Peachy Bronze Glow Makeup tutorial"><img src="assets/img-36.jpg" alt="Photograph of Mia with the finished peachy bronze glow look, bronzed skin, peach blush, copper eyes and glossy peach lips" fetchpriority="high" decoding="async" /><span class="frame-cta">Open the peachy bronze tutorial →</span></a>
       </div>
     </div>
   </section>
@@ -526,7 +497,7 @@ var ARTICLES = [
     id: "silver-sequin-mini-dress",
     title: "Silver Sequin Mini Dress — How to Style It for New Year Night",
     category: "Party & Date Night Looks",
-    cat: "fashion",
+    cat: "party",
     time: "15 min",
     level: "Easy",
     blurb: "The silver sequin mini is the whole outfit — here is how to style around it for New Year night: quiet heels, delicate jewellery, soft glam and sparkle that stays elegant.",
@@ -709,7 +680,7 @@ var ARTICLES = [
     id: "gold-shimmer-party-eye",
     title: "Gold Shimmer Party Eye Makeup",
     category: "Party & Date Night Looks",
-    cat: "makeup",
+    cat: "party",
     time: "20 min",
     level: "Medium",
     blurb: "Dazzling gold shimmer lids with bronze depth and a crisp wing — the party eye that catches every light in the room and never looks overdone.",
@@ -949,8 +920,9 @@ function setCategory(key, scroll){
 
 function cardHTML(a){
   var hot = a.newest ? '<span class="tag hot">Newest tutorial</span>' : (a.hot ? '<span class="tag hot">Trending on Pinterest</span>' : '');
+  var pin = a.images[a.images.length-1];
   return '<a class="card" href="#/look/'+a.id+'" aria-label="Open tutorial: '+a.title+'">'
-    + '<span class="thumb"><img src="'+a.images[0].src+'" alt="'+a.images[0].alt+'" loading="lazy" /><span class="thumb-cta">Open tutorial →</span></span>'
+    + '<span class="thumb"><img src="'+pin.src+'" alt="'+pin.alt+'" loading="lazy" decoding="async" /><span class="thumb-cta">Open tutorial →</span></span>'
     + '<span class="card-body">'
     + '<span class="tags">'+hot+'<span class="tag">'+a.category+'</span><span class="tag gold">'+a.level+'</span></span>'
     + '<h3>'+a.title+'</h3><p>'+a.blurb+'</p>'
@@ -989,9 +961,11 @@ function renderArticle(id){
   var a = null;
   ARTICLES.forEach(function(x){ if(x.id===id) a=x; });
   if(!a) return;
+  var pin = a.images[a.images.length-1];
   var gal = a.images.map(function(im, i){
     if(i===0) return "";
-    return '<button type="button" class="gal-thumb" data-src="'+im.src+'" data-cap="'+im.cap+'" aria-pressed="false" aria-label="Show photo '+(i+1)+'"><img src="'+im.src+'" alt="'+im.alt+'" loading="lazy" /><span>Photo '+(i+1)+'</span></button>';
+    var lbl = "Photo " + (i+1) + (i===a.images.length-1 ? " · From the pin" : "");
+    return '<button type="button" class="gal-thumb" data-src="'+im.src+'" data-cap="'+im.cap+'" data-alt="'+im.alt+'" aria-pressed="'+(i===a.images.length-1)+'" aria-label="Show photo '+(i+1)+'"><img src="'+im.src+'" alt="'+im.alt+'" loading="lazy" decoding="async" /><span>'+lbl+'</span></button>';
   }).join("");
   var steps = a.steps.map(function(s){
     return '<li class="step"><span class="step-num" aria-hidden="true"></span><div><h3>'+s.t+'</h3><p>'+s.d+'</p><span class="time">'+s.time+'</span></div></li>';
@@ -1003,11 +977,11 @@ function renderArticle(id){
   var relatedCards = suggested.map(cardHTML).join("");
   var html = ''
     + '<div class="art-head"><span class="tag">'+a.category+'</span>'
-    + '<h2>'+a.title+'</h2><p class="intro">'+a.intro+'</p></div>'
+    + '<h2 id="artTitle" tabindex="-1">'+a.title+'</h2><p class="intro">'+a.intro+'</p></div>'
     + '<div class="art-meta"><span>Total: '+a.time+'</span><span>Level: '+a.level+'</span><span>'+a.steps.length+' easy steps</span><span>Start to finish glow</span></div>'
-    + '<div class="gallery"><div class="gal-main" id="galMainWrap" title="Tap to see the next photo"><img id="galMain" src="'+a.images[0].src+'" alt="'+a.images[0].alt+'" /><span class="gal-hint">Tap photo for next →</span></div>'
-    + '<div class="gal-side"><button type="button" class="gal-thumb" data-src="'+a.images[0].src+'" data-cap="'+a.images[0].cap+'" aria-pressed="true" aria-label="Show photo 1"><img src="'+a.images[0].src+'" alt="'+a.images[0].alt+'" /><span>Photo 1 · From the pin</span></button>'+gal+'</div>'
-    + '<p class="gal-cap" id="galCap">'+a.images[0].cap+'</p></div>'
+    + '<div class="gallery"><button type="button" class="gal-main" id="galMainWrap" aria-label="Show the next photo"><img id="galMain" src="'+pin.src+'" alt="'+pin.alt+'" decoding="async" /><span class="gal-hint">Tap photo for next →</span></button>'
+    + '<div class="gal-side"><button type="button" class="gal-thumb" data-src="'+a.images[0].src+'" data-cap="'+a.images[0].cap+'" data-alt="'+a.images[0].alt+'" aria-pressed="false" aria-label="Show photo 1"><img src="'+a.images[0].src+'" alt="'+a.images[0].alt+'" decoding="async" /><span>Photo 1 · The start</span></button>'+gal+'</div>'
+    + '<p class="gal-cap" id="galCap">'+pin.cap+'</p></div>'
     + '<div class="art-cols"><aside class="need-box"><h3>You will need</h3><ul>'
     + a.needs.map(function(n){ return "<li>"+n+"</li>"; }).join("")
     + '</ul><button type="button" class="btn btn-rose btn-small" id="copyBtn" style="width:100%">Copy this list</button>'
@@ -1022,7 +996,9 @@ function renderArticle(id){
   var thumbs = document.querySelectorAll(".gal-thumb");
   thumbs.forEach(function(th){
     th.addEventListener("click", function(){
-      document.getElementById("galMain").src = th.getAttribute("data-src");
+      var gm = document.getElementById("galMain");
+      gm.src = th.getAttribute("data-src");
+      gm.alt = th.getAttribute("data-alt") || "";
       document.getElementById("galCap").textContent = th.getAttribute("data-cap");
       thumbs.forEach(function(x){ x.setAttribute("aria-pressed","false"); });
       th.setAttribute("aria-pressed","true");
@@ -1066,6 +1042,8 @@ function showArticle(id){
   var a = ARTICLES.filter(function(x){ return x.id===id; })[0];
   document.title = a.title + " · " + HOME_TITLE;
   window.scrollTo({top:0});
+  var t = document.getElementById("artTitle");
+  if (t && t.focus){ try { t.focus({preventScroll:true}); } catch(e){} }
 }
 function route(){
   var h = window.location.hash || "";
@@ -1138,7 +1116,7 @@ function copyList(a){
     var ta = document.createElement("textarea");
     ta.value = text; ta.style.position="fixed"; ta.style.opacity="0";
     document.body.appendChild(ta); ta.select();
-    try { document.execCommand("copy"); done(); } catch(e){ showToast("Copy didn't work here — the list is on the left of the tutorial."); }
+    try { document.execCommand("copy"); done(); } catch(e){ showToast("Copy didn't work here — the list is right here in the tutorial."); }
     document.body.removeChild(ta);
   }
 }
