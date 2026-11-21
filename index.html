@@ -169,8 +169,6 @@
   .cat-tile p{margin:0;color:var(--muted);font-size:.9rem;flex:1}
   .cat-tile .c-meta{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:11px;margin-top:6px;font-size:.83rem;font-weight:800;color:var(--faint)}
   .cat-tile .c-meta .go{margin-left:auto;color:var(--rose)}
-  .result-line{color:var(--muted);font-size:.92rem;font-weight:600;margin:0 0 16px}
-  .result-line b{color:var(--rose)}
   .no-results{display:none;background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:30px;text-align:center;color:var(--muted)}
   .no-results.show{display:block}
   .no-results h3{font-family:"Playfair Display",serif;color:var(--ink);font-size:1.3rem;margin:0 0 6px}
@@ -378,7 +376,6 @@
           <button type="button" class="chip" data-cat="party" aria-pressed="false">Party &amp; Date Night</button>
         </div>
       </div>
-      <p class="result-line" id="resultLine" aria-live="polite"></p>
       <div class="grid" id="grid"></div>
       <div class="no-results" id="noResults">
         <h3>Nothing matches that — yet</h3>
@@ -440,8 +437,197 @@ var PINTEREST = "https://www.pinterest.com/beautydiariesbymia/";
 
 var ARTICLES = [
   {
-    id: "lavender-floral-nail-art",
+    id: "rice-water-glow-skincare-routine",
     newest: true,
+    title: "Rice Water Glow Skincare Routine",
+    category: "Skincare & Glow",
+    cat: "skincare",
+    time: "45 min",
+    level: "Easy",
+    blurb: "The milky rice-water toner behind the softest glow — soak, strain, sweep on and seal — a gentle kitchen-cupboard ritual for calm, dewy, lit-from-within skin.",
+    intro: "Rice water is the oldest glow trick in the beauty book: the milky water left from soaking rice, swept over the skin like a toner to leave it soft, calm and quietly luminous. This routine turns it into a full little ritual — cleanse, rice water, serum on damp skin, moisturiser to seal, and SPF every morning. The three photos show this exact routine from the very start — the rice soaking and the milky water ready in its bottle — through the middle, with the rice water being swept over the skin on a cotton pad, to the finished ending, which is the photo you saw on the pin: Mia smiling in the bathroom light, skin glowing, holding up the little bottle of rice water. Make small batches, keep them chilled, and let the glow build day by day.",
+    images: [
+      {src:"assets/img-87.jpg", cap:"Photo 1 · Start — the rice soaking and the milky rice water strained into its glass bottle, ready to chill", alt:"Photograph of Mia at the start of the rice water glow skincare routine, with the bowl of soaking rice and the glass bottle of milky rice water ready beside her"},
+      {src:"assets/img-88.jpg", cap:"Photo 2 · Middle — rice water being swept over the face and neck on a soaked cotton pad", alt:"Photograph of Mia in the middle of the rice water glow skincare routine, sweeping a cotton pad soaked in rice water over her cheek"},
+      {src:"assets/img-89.jpg", cap:"Photo 3 · Ending — the finished rice water glow, the photo from the pin", alt:"Photograph of Mia at the end of the rice water glow skincare routine, smiling with fresh glowing skin and holding up a glass dropper bottle of milky rice water in a bright bathroom"}
+    ],
+    needs: ["Uncooked rice", "Clean water", "Glass bottle", "Gentle cleanser", "Cotton pads", "Hydrating serum", "Light moisturiser", "SPF 30+"],
+    steps: [
+      {t:"Rinse and soak the rice", d:"Rinse half a cup of rice, then soak it in a cup of clean water for 30 minutes. The water turns milky as it soaks — that soft, cloudy water is the whole treasure of this routine.", time:"30 min"},
+      {t:"Strain and chill the rice water", d:"Strain the milky water into a clean glass bottle and keep it in the fridge. Chilled rice water feels wonderful on the skin and stays fresh longer.", time:"2 min"},
+      {t:"Cleanse first, always", d:"Wash your face with a gentle cleanser and pat dry. Rice water belongs on clean skin — swept over makeup or the day's SPF, it never gets the chance to do its work.", time:"2 min"},
+      {t:"Sweep on the rice water", d:"Soak a cotton pad with rice water and sweep it over your face and neck. Gentle upward sweeps, no scrubbing — think of it as a toner, because that is exactly what it is.", time:"2 min"},
+      {t:"Serum while skin is still damp", d:"While skin is still damp, press in a hydrating serum. Damp skin drinks serum in far better than dry skin, and the rice water underneath helps it spread beautifully.", time:"1 min"},
+      {t:"Seal it with moisturiser", d:"Seal it all with a light moisturiser. This is the step that locks the rice water and serum against your skin so the glow lasts past the bathroom mirror.", time:"1 min"},
+      {t:"SPF every morning", d:"In the morning, always finish with SPF. Bright, fresh skin deserves protection — SPF is what keeps the glow you are building from fading in the sun.", time:"1 min"},
+      {t:"Keep the batch fresh", d:"Use the rice water fresh every 2–3 days for the best glow. Small batches, made often, beat one big bottle kept for weeks — your skin can tell the difference.", time:"1 min"}
+    ],
+    tips: ["Keep the rice water chilled and make a fresh batch every few days — cold rice water calms the skin as it tones, and fresh is always gentler than old.", "Patch-test first if your skin is sensitive: a little rice water behind the ear or along the jaw, wait a day, then go ahead with the full routine.", "Use it at night for the deepest glow — skin repairs while you sleep, and waking up to the soft, even finish is the best encouragement to keep going."],
+    avoid: ["Keeping one batch for weeks. Rice water turns quickly, and old, sour rice water irritates instead of glowing — if it smells off, pour it away and make fresh.", "Scrubbing with the cotton pad. Hard rubbing drags and reddens the skin; this routine is built on gentle sweeps, and the glow comes from consistency, not pressure.", "Skipping SPF because the routine feels 'natural'. Brightened skin needs sun protection just as much — SPF every morning, no exceptions."]
+  },
+  {
+    id: "winter-glow-skincare-set",
+    title: "Winter Glow Skincare Set",
+    category: "Skincare & Glow",
+    cat: "skincare",
+    time: "10 min",
+    level: "Easy",
+    blurb: "The full cold-weather line-up in the right order — cream cleanser, hydrating toner, vitamin C, rich moisturiser and SPF — for skin that stays dewy when the air turns dry.",
+    intro: "Winter skin does not need more products — it needs the right ones, in the right order, with richer textures than summer ever asks for. This set is Mia's whole cold-weather shelf working as a team: a gentle cream cleanser that never strips, a hydrating toner pressed in with warm palms, vitamin C for brightness, a rich moisturiser massaged upward, and a generous layer of SPF every morning. The three photos show this exact routine from the very start — the full set laid out and the cream cleanser going on — through the middle, with the serum being pressed into the skin, to the finished ending, which is the photo you saw on the pin: soft, cushioned, glowing winter skin. Layer thinnest to thickest, and let each layer settle for a breath before the next.",
+    images: [
+      {src:"assets/img-90.jpg", cap:"Photo 1 · Start — the winter glow set laid out, beginning with the gentle cream cleanser on damp skin", alt:"Photograph of Mia at the start of the winter glow skincare set, the cleanser, toner, serum, moisturiser and SPF laid out as she begins with the gentle cream cleanser"},
+      {src:"assets/img-91.jpg", cap:"Photo 2 · Middle — vitamin C serum warmed between the fingers and pressed over face and neck", alt:"Photograph of Mia in the middle of the winter glow skincare set, pressing drops of vitamin C serum into her cheek with her fingertips"},
+      {src:"assets/img-92.jpg", cap:"Photo 3 · Ending — the finished winter glow, the photo from the pin", alt:"Photograph of Mia at the end of the winter glow skincare set, skin soft, cushioned and glowing, the full set of products beside her"}
+    ],
+    needs: ["Gentle cream cleanser", "Hydrating toner", "Vitamin C serum", "Rich moisturiser", "SPF 50", "Overnight sleeping mask"],
+    steps: [
+      {t:"Cream cleanser on damp skin", d:"Start with the gentle cream cleanser on damp skin, massage for a minute, rinse with lukewarm water. A full minute of massage is what lifts the day away without stripping — winter skin cannot afford to be squeaky.", time:"2 min"},
+      {t:"Press in the hydrating toner", d:"Press the hydrating toner into skin with your palms, no rubbing. Pressing warms the toner and pushes it in; rubbing just moves it around and drags at cold, delicate skin.", time:"1 min"},
+      {t:"Vitamin C, warmed and pressed", d:"Warm 3–4 drops of vitamin C serum between your fingers and press over face and neck. Vitamin C is the brightness step — the one that keeps winter skin from looking grey and tired.", time:"1 min"},
+      {t:"Rich moisturiser, massaged upward", d:"Follow with the rich moisturiser, massaging upward. Richer than your summer cream, always — this is the blanket layer that keeps all the hydration underneath from escaping into dry winter air.", time:"2 min"},
+      {t:"SPF, generously, every morning", d:"In the morning, finish with a generous layer of SPF. Winter sun still reaches your skin, and snow and pale skies reflect it right back — SPF is a winter step too.", time:"1 min"},
+      {t:"Sleeping mask at night, twice a week", d:"At night, swap the SPF for a sleeping mask twice a week. It works while you sleep, and you wake to the softest skin of the whole routine — this is the set's little luxury.", time:"1 min"}
+    ],
+    tips: ["Layer thinnest to thickest — toner, serum, moisturiser, SPF. Heavy layers first would block the light ones from ever reaching your skin.", "Wait a minute between serum and moisturiser. Letting the vitamin C settle first stops the two from pilling into little rolls on your cheeks.", "A pea-sized amount of SPF is never enough — use two finger-lengths for your face and neck. It feels like a lot; it is exactly right."],
+    avoid: ["Hot water on winter skin. It melts away the natural oils this whole set is trying to protect — lukewarm, always, even when a hot splash feels good.", "Skipping moisturiser because a serum 'feels like enough'. Serums treat, moisturisers seal; in winter, unsealed hydration evaporates within the hour.", "Using the sleeping mask every night. Twice a week is the sweet spot — nightly masking can overwhelm the skin and dull the very glow you are building."]
+  },
+  {
+    id: "sunset-blush-makeup-look",
+    title: "Sunset Blush Makeup Look",
+    category: "Makeup Looks",
+    cat: "makeup",
+    time: "20 min",
+    level: "Easy",
+    blurb: "Coral cream blush swept high on the cheeks and over the lids, golden shimmer in the corners and a glossy nude lip — golden hour, worn on your face.",
+    intro: "This is the look of the last ten minutes of sunlight: warm coral blush placed high and swept toward the temples, the same blush washed softly over the eyelids so the whole face feels sun-warmed and connected, and a glint of gold in the inner corners like light catching water. It is built on dewy skin and cream textures, so it melts in rather than sitting on top. The three photos show this exact look from the very start — skin prepped and glowing, the coral blush ready — through the middle, with the blush being blended high on the cheeks, to the finished ending, which is the photo you saw on the pin: the full sunset glow, glossy lip and all. Keep everything else soft and let the blush be the story.",
+    images: [
+      {src:"assets/img-93.jpg", cap:"Photo 1 · Start — skin prepped with moisturiser and glowy primer, the coral cream blush ready", alt:"Photograph of Mia at the start of the sunset blush makeup look, skin prepped and glowing with the coral cream blush and brushes laid out beside her"},
+      {src:"assets/img-94.jpg", cap:"Photo 2 · Middle — coral cream blush being blended high on the cheek, up toward the temple", alt:"Photograph of Mia in the middle of the sunset blush makeup look, blending coral cream blush high on her cheek with a fluffy brush"},
+      {src:"assets/img-95.jpg", cap:"Photo 3 · Ending — the finished sunset blush look, the photo from the pin", alt:"Photograph of Mia at the end of the sunset blush makeup look, coral blush swept high on her cheeks, golden shimmer in the inner corners and a glossy nude lip"}
+    ],
+    needs: ["Glowy primer", "Dewy foundation", "Coral cream blush", "Fluffy blush brush", "Golden shimmer eyeshadow", "Mascara", "Glossy nude lipstick", "Highlighter"],
+    steps: [
+      {t:"Prep for glow", d:"Prep skin with moisturiser and a glowy primer. This look lives on dewy skin — the primer's sheen underneath is what makes the blush look like light, not makeup.", time:"3 min"},
+      {t:"Dewy foundation, blended well", d:"Apply a light dewy foundation and blend well. Keep it light: the blush needs to melt into real skin, and heavy coverage turns sunset warmth into a mask.", time:"3 min"},
+      {t:"Coral blush, high on the cheeks", d:"Dab a coral cream blush high on the cheeks and blend upward toward the temples. High placement is the whole trick — it lifts the face and mimics exactly where the sun touches first.", time:"3 min"},
+      {t:"The same blush over the lids", d:"Sweep the same blush softly over the eyelids as eyeshadow. Using the cheek colour on the eyes ties the whole face together in that warm, monochromatic sunset way.", time:"2 min"},
+      {t:"Golden shimmer in the corners", d:"Add a touch of golden shimmer to the inner corners. Just a touch, pressed on with a fingertip — it opens the eyes and catches the light every time you blink.", time:"1 min"},
+      {t:"Curl and two coats of mascara", d:"Curl lashes and add two coats of mascara. Warm looks still need definition at the lash line, or the eyes disappear into all that glow.", time:"3 min"},
+      {t:"Glossy lip and a dusting of highlight", d:"Finish with a glossy nude lip and a light dusting of highlighter on the cheekbones. The gloss echoes the dewy skin, and the highlight sits right where the sunset would land.", time:"2 min"}
+    ],
+    tips: ["Cream blush blends best on warm skin — apply before powder, while the foundation is still fresh, and it will melt in like a natural flush.", "Keep the rest of the face soft so the blush stays the star. One feature leading is what makes a look feel expensive.", "Golden-hour light makes this look glow even more — if you are taking photos, sunset light plus this blush is genuinely unbeatable."],
+    avoid: ["Blush placed low and round on the apples only. That reads cute and doll-like; this look is lifted and swept — blend up toward the temples, always.", "Powdering before the cream blush. Cream over powder cakes and patches; creams first, the lightest dusting of powder only where you truly need it.", "A bold lip with it. A strong lip fights the blush for the lead role — glossy nude keeps the sunset story in charge."]
+  },
+  {
+    id: "siren-eye-makeup",
+    title: "Siren Eye Makeup",
+    category: "Makeup Looks",
+    cat: "makeup",
+    time: "25 min",
+    level: "Medium",
+    blurb: "A lifted, elongated wing, smoky lower lashes and a nude glossy lip — the sultry siren eye that makes every gaze look longer, sharper and impossible to ignore.",
+    intro: "The siren eye is all about direction: everything sweeps up and out, stretching the eyes into that long, lifted, slightly mysterious shape. A thin black line that thickens toward the outer corner, a wing flicked along the angle of the lower lash line, and dark brown shadow smudged underneath for a smoky lift — no heavy colour, just shape. The three photos show this exact look from the very start — lids primed and the taupe base going into the crease — through the middle, with the wing being drawn and flicked outward, to the finished ending, which is the photo you saw on the pin: both eyes lifted and smoky, lips soft and nude. Draw the wing with your eye open and your elbow rested, and this look is far easier than it looks.",
+    images: [
+      {src:"assets/img-96.jpg", cap:"Photo 1 · Start — lids primed and set, soft taupe being blended into the crease as the base", alt:"Photograph of Mia at the start of the siren eye makeup, blending a soft taupe eyeshadow into her crease with the liner and shadows laid out beside her"},
+      {src:"assets/img-97.jpg", cap:"Photo 2 · Middle — the black liquid liner line thickening toward the outer corner, the wing flicked up and out", alt:"Photograph of Mia in the middle of the siren eye makeup, drawing the black liquid liner wing along her upper lash line, flicking it upward at the outer corner"},
+      {src:"assets/img-98.jpg", cap:"Photo 3 · Ending — the finished siren eyes, the photo from the pin", alt:"Photograph of Mia at the end of the siren eye makeup, lifted winged liner, smoky lower lashes, lots of mascara and a nude glossy lip"}
+    ],
+    needs: ["Eye primer", "Translucent powder", "Taupe eyeshadow", "Black liquid eyeliner", "Dark brown eyeshadow", "Nude shimmer shadow", "Volumising mascara", "Nude lip gloss"],
+    steps: [
+      {t:"Prime and set the lids", d:"Prime lids and set with a translucent powder. Liner drawn over bare, oily lids migrates within the hour — primer and a whisper of powder are the anchor for the whole look.", time:"2 min"},
+      {t:"Taupe in the crease as the base", d:"Blend a soft taupe shade into the crease as a base. This quiet shadow is the scaffolding: it gives the eye its elongated shape before a single line is drawn.", time:"3 min"},
+      {t:"The line — thin inside, thicker outside", d:"With a black liquid liner, draw a thin line from the inner corner, thickening toward the outer corner. Keep the inner third whisper-thin; the growing weight toward the outside is what stretches the eye.", time:"4 min"},
+      {t:"Flick the wing up and out", d:"Flick the wing upward and outward, following the angle of your lower lash line. Imagine the line continuing from your lower lashes toward the tail of your brow — that angle never fails.", time:"3 min"},
+      {t:"Smoky shadow along the lower lashes", d:"Smudge dark brown shadow along the lower lashes for a smoky lift. Soft brown, not black — the smoke should blur the lower line, balancing the sharp wing above.", time:"3 min"},
+      {t:"Nude shadow and a touch of shimmer", d:"Add a nude shadow on the lid and a touch of shimmer in the centre. The shimmer catches light right at the middle of the eye, making the lifted shape look even longer.", time:"2 min"},
+      {t:"Lots of mascara, nude glossy lip", d:"Finish with lots of mascara and a nude glossy lip. Coat the outer lashes most of all, and keep the lip soft — the eyes are doing all the talking in this look.", time:"3 min"}
+    ],
+    tips: ["Rest your elbow on a table for a steady wing. A floating hand wobbles; a planted elbow turns the flick into one calm stroke.", "Draw the wing with your eye open so the lift sits right — a wing drawn on a closed, stretched lid lands in a completely different place when you open your eye.", "Keep lips nude so the eyes stay the focus. Glossy and soft is perfect; anything stronger splits the look in two."],
+    avoid: ["A thick line at the inner corner. It closes the eye down and shortens it — the exact opposite of the siren shape; thin inside, always.", "Black shadow smudged underneath instead of brown. It reads harsh and bruised in daylight; dark brown gives the same smoke with twice the softness.", "Rushing the wing freehand in mid-air. Every wobble shows in a look this sharp — elbow down, small strokes, connect them at the end."]
+  },
+  {
+    id: "blush-pink-marble-nails",
+    title: "Blush Pink Marble Nails",
+    category: "Nail Art Ideas",
+    cat: "nails",
+    time: "35 min",
+    level: "Easy",
+    blurb: "Soft almond nails in blush pink with delicate white marble veins swirled through — the dreamy, stone-inspired manicure that looks salon-carved and takes one toothpick.",
+    intro: "Marble nails look like they belong in a salon window, but the secret is almost unfairly simple: white polish dropped onto still-wet blush pink and swirled once or twice with a thin brush, so the veins wander the way real stone does. The three photos show this exact manicure from the very start — nails shaped, polishes and brush laid out on the marble table — through the middle, with the white veins being swirled into the wet pink, to the finished ending, which is the photo you saw on the pin: both hands flat on the marble, every nail a little piece of blush stone. Work one nail at a time, use less white than you think, and let the swirls stay imperfect — real marble never repeats itself.",
+    images: [
+      {src:"assets/img-99.jpg", cap:"Photo 1 · Start — nails shaped to a soft almond, blush-pink and white polishes and the thin brush ready", alt:"Photograph of Mia at the start of the blush pink marble nails, nails shaped and bare with the blush-pink polish, white polish and thin nail art brush laid out beside her hands"},
+      {src:"assets/img-100.jpg", cap:"Photo 2 · Middle — tiny drops of white polish being swirled into soft marble veins on the wet pink", alt:"Photograph of Mia in the middle of the blush pink marble nails, swirling drops of white polish into marble veins on a blush-pink nail with a thin brush"},
+      {src:"assets/img-101.jpg", cap:"Photo 3 · Ending — the finished blush pink marble nails, the photo from the pin", alt:"Photograph of both hands showing the finished blush pink marble nails, almond nails in blush pink with soft white marble veins, resting on a white marble surface beside the pink polish bottle"}
+    ],
+    needs: ["Nail file", "Cuticle pusher", "Base coat", "Blush-pink polish", "White polish", "Thin nail art brush", "Glossy top coat", "Cuticle oil"],
+    steps: [
+      {t:"Shape and prep", d:"Shape nails into a soft almond shape and push back cuticles. Marble looks most like real stone on a smooth, elongated nail — the almond shape is half the elegance.", time:"5 min"},
+      {t:"Base coat, fully dry", d:"Apply a base coat and let it dry. Marble veins dragged over a tacky base smear into clouds; a dry base keeps every swirl crisp.", time:"3 min"},
+      {t:"Two thin coats of blush pink", d:"Paint two thin coats of blush-pink polish. Thin coats are the rule of this whole design — the second coat is the one you will marble into, so it needs to be smooth, not thick.", time:"6 min"},
+      {t:"Drop the white while it is wet", d:"While the second coat is still slightly wet, add tiny drops of white polish. Two or three small drops per nail, placed off-centre — this timing is the entire technique, so work one nail at a time.", time:"5 min"},
+      {t:"Swirl the marble veins", d:"With a thin brush or toothpick, swirl the white into soft marble veins. One or two gentle S-curves per nail, then stop — every extra pass muddies the stone into plain cloudy pink.", time:"6 min"},
+      {t:"Clean up the edges", d:"Clean up the edges with a small brush dipped in remover. Marble near the cuticle looks accidental; a clean edge makes the same design look carved and deliberate.", time:"3 min"},
+      {t:"Glossy top coat and cuticle oil", d:"Seal with a glossy top coat and add cuticle oil. The gloss is what turns swirls into stone — under it, the veins seem to sit deep inside the nail.", time:"4 min"}
+    ],
+    tips: ["Work one nail at a time so the polish stays wet enough to swirl — by the third nail, the first is already too dry to marble.", "Less white is more — a few veins look more real than many. Real marble is mostly stone with a whisper of veining, and your nails should be too.", "Thin coats dry faster and smoother, and they marble cleaner — thick polish floods the drops and the veins drown."],
+    avoid: ["Over-swirling. The fourth and fifth pass with the brush turns veins into fog — two curves, admire, move on.", "Waiting for the pink to dry before adding white. Dry polish will not blend; the drops just sit on top like paint on glass and chip within a day.", "Matching veins on every nail. Identical swirls read as a stamp, not stone — let each nail wander differently, like real marble cut from one slab."]
+  },
+  {
+    id: "glazed-donut-manicure",
+    title: "Glazed Donut Manicure",
+    category: "Manicure Inspiration",
+    cat: "nails",
+    time: "30 min",
+    level: "Easy",
+    blurb: "Sheer milky-white nails buffed with pearly chrome for that soft, sugary glazed-donut shine — the clean-girl manicure that glows in every light.",
+    intro: "The glazed donut manicure is the sheer, milky manicure with a secret: a whisper of pearly chrome powder buffed over the top, so the nails catch the light with a soft, sugary sheen instead of a flat shine. It is subtle in shade and luminous in sunlight, and it grows out so gracefully that it looks fresh for weeks. The three photos show this exact manicure from the very start — nails shaped and the milky polish and chrome powder ready — through the middle, with the pearly chrome being buffed over the tacky top coat, to the finished ending, which is the photo you saw on the pin: glossy, glazed, light-catching nails. The whole trick is timing — the chrome only grips a tacky layer, so have everything open and ready before you begin.",
+    images: [
+      {src:"assets/img-102.jpg", cap:"Photo 1 · Start — nails shaped to a soft oval, milky-white polish, chrome powder and sponge applicator ready", alt:"Photograph of Mia at the start of the glazed donut manicure, nails shaped and bare with the sheer milky-white polish, pearly chrome powder and sponge applicator laid out beside her hands"},
+      {src:"assets/img-103.jpg", cap:"Photo 2 · Middle — pearly chrome powder being buffed over the tacky top coat with the sponge applicator", alt:"Photograph of Mia in the middle of the glazed donut manicure, buffing pearly chrome powder over a milky-white nail with a sponge applicator"},
+      {src:"assets/img-104.jpg", cap:"Photo 3 · Ending — the finished glazed donut nails, the photo from the pin", alt:"Photograph of Mia showing the finished glazed donut manicure, soft oval nails in sheer milky white with a pearly chrome glaze shining in the light"}
+    ],
+    needs: ["Nail file", "Cuticle pusher", "Base coat", "Sheer milky-white polish", "Pearly chrome powder", "Sponge applicator", "No-wipe glossy top coat", "Cuticle oil"],
+    steps: [
+      {t:"Shape and prep", d:"Shape nails into a soft oval and push back cuticles. The glazed finish shows every ridge and rough edge, so a smooth, tidy nail underneath is what makes the glaze look expensive.", time:"5 min"},
+      {t:"Base coat, fully dry", d:"Apply a base coat and let it dry. A clean, dry base keeps the milky colour even — sheer polishes streak over anything less than a smooth start.", time:"3 min"},
+      {t:"Two thin coats of milky white", d:"Paint two thin coats of sheer milky-white polish. Sheer is the point: you want that soft, translucent, milk-glass look, not an opaque white — two thin coats, never one thick one.", time:"6 min"},
+      {t:"Chrome over the tacky layer", d:"While the top coat is still tacky, buff a tiny amount of pearly chrome powder over each nail with a sponge applicator. Small circles, gentle pressure — the powder melts into the tack and turns to liquid pearl.", time:"5 min"},
+      {t:"Brush off the extra powder", d:"Brush off the extra powder gently. A soft, clean brush sweeps away the loose dust so only the bonded glaze remains — be gentle, fresh chrome scratches easily.", time:"1 min"},
+      {t:"Seal with no-wipe top coat", d:"Seal with a no-wipe glossy top coat and cure or air-dry fully. This clear shell locks the chrome in; without it, the glaze rubs away on fabric within days.", time:"4 min"},
+      {t:"Cuticle oil for the salon shine", d:"Finish with cuticle oil for a salon shine. Oil around the nail makes the whole hand look freshly manicured and keeps the skin as soft as the nails look.", time:"1 min"}
+    ],
+    tips: ["The chrome only sticks to a tacky layer, so work fast — one hand's top coat, chrome straight on, then the other hand.", "A little powder goes a long way. Dip the applicator once and buff; a heavy scoop turns pearly glaze into frosted glitter.", "Two thin coats of top coat keep the glaze from dulling — one to seal the chrome, a second for that deep, glassy shine."],
+    avoid: ["Waiting until the top coat is fully dry to add chrome. Dry means no grip — the powder dusts straight off and the glaze never happens.", "Opaque white polish underneath. The donut glow is translucent; a solid white base turns it into ordinary French tips with glitter.", "Scrubbing the nails with a towel in the first hours. Fresh chrome is delicate — pat dry, and let the top coat harden fully before real life."]
+  },
+  {
+    id: "sleek-high-ponytail-hairstyle",
+    title: "Sleek High Ponytail Hairstyle",
+    category: "Hairstyles",
+    cat: "hair",
+    time: "10 min",
+    level: "Easy",
+    blurb: "Hair brushed glass-smooth and gathered high at the crown, the elastic hidden under a wrapped strand — the sleek, lifted ponytail that makes every outfit look sharper.",
+    intro: "A sleek high ponytail is the hairstyle equivalent of good posture: it lifts everything. The face looks snatched, the neck looks longer, and even a plain knit top suddenly reads styled. The craft is in the smoothing — brushing from the ends upward, serum through the lengths, gathering high at the crown with the sides brushed sleek as you go — and in one salon trick: wrapping a strand of hair around the elastic so the fastening disappears. The three photos show this exact style from the very start — hair down and being brushed completely smooth — through the middle, with the hair gathered high and secured at the crown, to the finished ending, which is the photo you saw on the pin: Mia in profile, ponytail sleek and high, two soft strands framing her face. Ten minutes, one strong elastic, zero bumps.",
+    images: [
+      {src:"assets/img-105.jpg", cap:"Photo 1 · Start — hair being brushed completely smooth from the ends upward, serum ready", alt:"Photograph of Mia at the start of the sleek high ponytail hairstyle, brushing her long light-brown hair smooth with a paddle brush"},
+      {src:"assets/img-106.jpg", cap:"Photo 2 · Middle — hair gathered high at the crown and secured with the strong elastic", alt:"Photograph of Mia in the middle of the sleek high ponytail hairstyle, gathering her hair high at the crown and securing it with the elastic, sides brushed sleek"},
+      {src:"assets/img-107.jpg", cap:"Photo 3 · Ending — the finished sleek high ponytail, the photo from the pin", alt:"Photograph of Mia at the end of the sleek high ponytail hairstyle, in profile with the ponytail high, sleek and glossy, two soft face-framing strands loose, wearing a cream ribbed top"}
+    ],
+    needs: ["Paddle brush", "Hair serum", "Strong hair elastic", "Bobby pins", "Light-hold hairspray", "Curling iron"],
+    steps: [
+      {t:"Brush completely smooth", d:"Brush hair completely smooth, working from the ends upward. Ends first, then mid-lengths, then roots — brushing straight from the top just pushes tangles down into knots.", time:"2 min"},
+      {t:"Serum through the lengths", d:"Smooth a pea-sized drop of serum through the lengths. Serum is what turns brushed hair into sleek hair — it weighs down the fuzz and adds the first layer of shine.", time:"1 min"},
+      {t:"Gather high at the crown", d:"Gather hair high at the crown, brushing the sides sleek as you go. Use the brush right up to your hand with every pass — the sides are where bumps are born.", time:"2 min"},
+      {t:"Secure with a strong elastic", d:"Secure with a strong elastic, wrapping it twice for hold. A high ponytail is heavy; a flimsy elastic slides down within the hour and takes the sleekness with it.", time:"1 min"},
+      {t:"Wrap a strand around the elastic", d:"Take a small strand from underneath and wrap it around the elastic, pinning it in place. This one move hides the fastening completely and is the difference between gym hair and salon hair.", time:"2 min"},
+      {t:"Smooth the flyaways", d:"Smooth flyaways with a little hairspray on a clean brush. Spray the brush, never the head directly — the brush lays the fine hairs down flat without a stiff, crunchy shell.", time:"1 min"},
+      {t:"Face-framing strands and curled ends", d:"Pull out two soft face-framing strands and curl the ponytail ends lightly. The strands soften the severity at the face, and a gentle curl at the ends keeps the tail swinging instead of hanging.", time:"2 min"}
+    ],
+    tips: ["Tilt your head back slightly while gathering for extra lift — hair secured with your chin up sits higher and tighter once your head is level.", "The wrap-around strand hides the elastic and makes it look salon-done — take it from underneath so the smooth top stays untouched.", "A spritz of shine spray on the ponytail adds gloss. Aim at the tail, not the crown, so the sleek roots stay clean, not greasy."],
+    avoid: ["Gathering dry, unbrushed hair straight up. Every tangle becomes a bump under the sleek surface, and no amount of hairspray flattens a bump that is built in.", "A weak elastic. One wrap of a tired hair tie and the ponytail migrates down your head by lunchtime — strong elastic, wrapped twice.", "Hairspray sprayed straight onto the crown. It lands in stiff patches and dulls the shine; on a brush, it smooths — that is the whole difference."]
+  },
+  {
+    id: "lavender-floral-nail-art",
     title: "Lavender Floral Nail Art — How to Do It at Home",
     category: "Nail Art Ideas",
     cat: "nails",
@@ -871,11 +1057,10 @@ function esc(s){
 
 function renderCategories(){
   document.getElementById("catGrid").innerHTML = CATEGORIES.map(function(c){
-    var n = ARTICLES.filter(c.match).length;
     return '<button type="button" class="cat-tile" data-cat="'+c.key+'" aria-pressed="false">'
       + '<span class="c-thumb"><img src="'+c.img+'" alt="'+c.alt+'" loading="lazy" /></span>'
       + '<span class="c-body"><h3>'+c.name+'</h3><p>'+c.desc+'</p>'
-      + '<span class="c-meta"><span>'+n+' tutorial'+(n===1?"":"s")+'</span><span class="go">See the tutorials →</span></span></span></button>';
+      + '<span class="c-meta"><span class="go">See the tutorials →</span></span></span></button>';
   }).join("");
   document.querySelectorAll(".cat-tile").forEach(function(t){
     t.addEventListener("click", function(){
@@ -937,14 +1122,10 @@ function renderGrid(){
   grid.style.display = list.length ? "" : "none";
   document.getElementById("empty").classList.toggle("show", ARTICLES.length===0);
   document.getElementById("noResults").classList.toggle("show", list.length===0 && ARTICLES.length>0);
-  var line = "Showing <b>" + list.length + "</b> of " + ARTICLES.length + " tutorials";
-  if (activeCat !== "all"){ var c = catByKey(activeCat); if (c) line += " in <b>" + c.name + "</b>"; }
-  if (query) line += " matching <b>“" + esc(query) + "”</b>";
-  document.getElementById("resultLine").innerHTML = line + ".";
   var st = document.getElementById("searchStatus");
   if (query){
     st.innerHTML = list.length
-      ? "<b>" + list.length + "</b> tutorial" + (list.length===1 ? "" : "s") + " match “" + esc(query) + "” — see them right below."
+      ? "Tutorials matching “" + esc(query) + "” — see them right below."
       : "No tutorials match “" + esc(query) + "” yet — try “glam”, “waves” or “nails”.";
   } else {
     st.textContent = "";
@@ -1168,5 +1349,6 @@ syncFilterUI();
 renderBoards();
 route();
 </script>
+<script defer src="data:application/javascript;base64,InVzZSBzdHJpY3QiOygoKT0+e3ZhciB0PSh0LGUpPT4oKT0+KHQmJihlPXQodD0wKSksZSksZT0odCxlKT0+KCk9PihlfHx0KChlPXtleHBvcnRzOnt9fSkuZXhwb3J0cyxlKSxlLmV4cG9ydHMpO2Z1bmN0aW9uIG4odCxlPWxvY2F0aW9uLmhyZWYpe2lmKHQpe2xldCBuPW5ldyBVUkwoZSk7aWYobi5wYXRobmFtZSE9PXQpcmV0dXJuIG4ucGF0aG5hbWU9dCxuLnNlYXJjaD0iIixuLmhyZWZ9cmV0dXJuIGV9ZnVuY3Rpb24gcigpe3JldHVybiEhKG5hdmlnYXRvci53ZWJkcml2ZXJ8fG5hdmlnYXRvci51c2VyQWdlbnQuaW5jbHVkZXMoIkhlYWRsZXNzIikpfXZhciBpPXQoKCk9Pnt9KTtmdW5jdGlvbiBhKHQsZSxuKXtsZXQgcj1sKCksaT1wKHQpLGE9clt0XSxvPXJbaV0sdT1hPT09ZT97Li4ubywuLi5ufTpuO2lmKGE9PT1lJiZmKG8sdSkpcmV0dXJuITE7bGV0e1tpXTpzLC4uLmN9PXI7cmV0dXJuIGQoey4uLmMsW3RdOmUsLi4uT2JqZWN0LmtleXModSkubGVuZ3RoJiZ7W2ldOnV9fSksITB9ZnVuY3Rpb24gbygpe2Qoe30pfWZ1bmN0aW9uIHUoKXtsZXR7dXNlcklkOnQsZ3JvdXBJZDplLHRyYWl0czpuLGdyb3VwVHJhaXRzOnJ9PWwoKSxpPXsuLi5ufTtmb3IobGV0W2Esb11vZiBPYmplY3QuZW50cmllcyhudWxsIT1yP3I6e30pKWlbYGdyb3VwXyR7YX1gXT1vO3JldHVybnsuLi50JiZ7dXNlcklkOnR9LC4uLmUmJntncm91cElkOmV9LC4uLk9iamVjdC5rZXlzKGkpLmxlbmd0aCYme3Byb3BzOml9fX1mdW5jdGlvbiBsKCl7aWYoZylyZXR1cm4gaDt0cnl7bGV0IHQ9bG9jYWxTdG9yYWdlLmdldEl0ZW0odik7aD10P3MoSlNPTi5wYXJzZSh0KSk6e319Y2F0Y2goZSl7fXJldHVybiBofWZ1bmN0aW9uIGQodCl7aD10O3RyeXt0LnVzZXJJZHx8dC5ncm91cElkP2xvY2FsU3RvcmFnZS5zZXRJdGVtKHYsSlNPTi5zdHJpbmdpZnkodCkpOmxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKHYpLGc9ITF9Y2F0Y2goZSl7Zz0hMH19ZnVuY3Rpb24gcyh0KXtyZXR1cm57Li4uInN0cmluZyI9PXR5cGVvZiB0LnVzZXJJZCYme3VzZXJJZDp0LnVzZXJJZCwuLi5jKHQudHJhaXRzKSYme3RyYWl0czp0LnRyYWl0c319LC4uLiJzdHJpbmciPT10eXBlb2YgdC5ncm91cElkJiZ7Z3JvdXBJZDp0Lmdyb3VwSWQsLi4uYyh0Lmdyb3VwVHJhaXRzKSYme2dyb3VwVHJhaXRzOnQuZ3JvdXBUcmFpdHN9fX19ZnVuY3Rpb24gYyh0KXtyZXR1cm4ib2JqZWN0Ij09dHlwZW9mIHQmJm51bGwhPT10JiYhQXJyYXkuaXNBcnJheSh0KX1mdW5jdGlvbiBwKHQpe3JldHVybiJ1c2VySWQiPT09dD8idHJhaXRzIjoiZ3JvdXBUcmFpdHMifWZ1bmN0aW9uIGYodD17fSxlPXt9KXtsZXQgbj1PYmplY3Qua2V5cyh0KTtyZXR1cm4gbi5sZW5ndGg9PT1PYmplY3Qua2V5cyhlKS5sZW5ndGgmJm4uZXZlcnkobj0+biBpbiBlJiZ0W25dPT09ZVtuXSl9dmFyIHYsaCxnLHk9dCgoKT0+e3Y9Il9fdmFfYXR0cmlidXRpb24iLGg9e30sZz0hMX0pO2UoKCk9PntpKCkseSgpLGZ1bmN0aW9uKCl7dmFyIHQ7bGV0IGU9IjAuMS4zIixpPXQ9PnQsbD1kb2N1bWVudCxkPWwuY3VycmVudFNjcmlwdDtpZihyKCkpcmV0dXJuO2xldCBzPW51bGwhPSh0PW51bGw9PWQ/dm9pZCAwOmQuZGF0YXNldCk/dDp7fSxjPXcocywidmlldyIpLHA9dyhzLCJldmVudCIpLGY9dyhzLCJzZXNzaW9uIiksdj13KHMsImlkZW50aWZ5IiksaD13KHMsImdyb3VwIiksZz1udWxsLHk9bnVsbCxfPSEwO2Z1bmN0aW9uIHcodCxlKXtyZXR1cm4gdFtgJHtlfUVuZHBvaW50YF18fCgiZW5kcG9pbnQiaW4gdD9gJHt0LmVuZHBvaW50fS8ke2V9YDpgJHtudWxsIT1kJiZkLnNyYy5pbmNsdWRlcygiL3ZhLyIpPyIvdmEiOiIvX3ZlcmNlbC9pbnNpZ2h0cyJ9LyR7ZX1gKX1hc3luYyBmdW5jdGlvbiBJKHQpe2lmKHQmJiFBcnJheS5pc0FycmF5KHQpKXJldHVybntwOnR9O2xldCBlPWwucXVlcnlTZWxlY3RvckFsbCgiW2RhdGEtZmxhZy12YWx1ZXNdIik7aWYoIWR8fCFlLmxlbmd0aClyZXR1cm47bGV0IG49bmV3IFVSTChkLnNyYykscj1uLnBhdGhuYW1lLnNwbGl0KCIvIiksaT1yLnBvcCgpO3JldHVybiBpJiZyLnB1c2goImZsYWdzIixpKSxuLnBhdGhuYW1lPXIuam9pbigiLyIpLGltcG9ydChuLmhyZWYpLnRoZW4obj0+bi5nYXRoZXIoZSx0KSl9YXN5bmMgZnVuY3Rpb24gbSh0LGUpe3RyeXthd2FpdCBmZXRjaCh0LHttZXRob2Q6IlBPU1QiLGtlZXBhbGl2ZTohMCxoZWFkZXJzOnsiQ29udGVudC1UeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LGJvZHk6SlNPTi5zdHJpbmdpZnkoZSl9KX1jYXRjaChuKXt9fWFzeW5jIGZ1bmN0aW9uIGsoe3R5cGU6dCxkYXRhOnIsb3B0aW9uczphfSl7dmFyIG87bGV0IGQ9bih5KSxmPW51bGw9PWE/dm9pZCAwOmEuX19jZHAsdj1sLnJlZmVycmVyLGg9aSh7dHlwZTp0LHVybDpkLHBheWxvYWQ6ciwuLi52b2lkIDAhPT1mJiZ7X19jZHA6Zn19KTtpZighMT09PWh8fG51bGw9PT1oKXJldHVybjtoJiYoZD1oLnVybCxyPW51bGwhPShvPWgucGF5bG9hZCk/bzpyLGY9aC5fX2NkcCk7bGV0IF89di5pbmNsdWRlcyhsb2NhdGlvbi5ob3N0KSx3PXtvOmQsc3Y6ZSxzZGtuOnMuc2RrbixzZGt2OnMuc2RrdiwuLi5nJiZ7ZHA6Z30sLi4ubnVsbCE9YSYmYS53aXRoUmVmZXJyZXImJiFfP3tyOnZ9Ont9LC4uLnUoKSwuLi4iZXZlbnQiPT09dCYmciYme2VuOnIubmFtZSxlZDpyLmRhdGF9LGY6YXdhaXQgSShudWxsPT1hP3ZvaWQgMDphLmZsYWdzKS5jYXRjaCgoKT0+e30pLC4uLnZvaWQgMCE9PWYmJntfX2NkcDpmfX07cmV0dXJuIG0oInBhZ2V2aWV3Ij09PXQ/YzpwLHcpfWFzeW5jIGZ1bmN0aW9uIGIodD17fSl7cmV0dXJuIGsoe3R5cGU6InBhZ2V2aWV3IixvcHRpb25zOnt3aXRoUmVmZXJyZXI6dC53aXRoUmVmZXJyZXIsX19jZHA6dC5fX2NkcH19KX1hc3luYyBmdW5jdGlvbiBTKHQsZSxuKXtyZXR1cm4gayh7dHlwZToiZXZlbnQiLGRhdGE6e25hbWU6dCxkYXRhOmV9LG9wdGlvbnM6e3dpdGhSZWZlcnJlcjohMCxmbGFnczpudWxsPT1uP3ZvaWQgMDpuLmZsYWdzLF9fY2RwOm51bGw9PW4/dm9pZCAwOm4uX19jZHB9fSl9YXN5bmMgZnVuY3Rpb24gUih0LHIsbyxsLGQpe3ZhciBjLHA7bGV0IGY9e3R5cGU6ImV2ZW50Iix1cmw6bih5KSxwYXlsb2FkOntuYW1lOnQsZGF0YTp7Li4ubCxbcl06b319LC4uLnZvaWQgMCE9PWQmJntfX2NkcDpkfX0sXz1pKGYpO2lmKCExPT09X3x8bnVsbD09PV8pcmV0dXJuO2xldCB3PV98fGY7ZD13Ll9fY2RwO2xldHtbcl06SSwuLi5rfT1udWxsIT0ocD1udWxsPT0oYz13LnBheWxvYWQpP3ZvaWQgMDpjLmRhdGEpP3A6e307aWYoInN0cmluZyIhPXR5cGVvZiBJfHwhSXx8IWEocixJLGspJiZ2b2lkIDA9PT1kKXJldHVybjtsZXQgYj17Li4ue286dy51cmwsc3Y6ZSxzZGtuOnMuc2RrbixzZGt2OnMuc2RrdiwuLi5nJiZ7ZHA6Z319LC4uLnUoKSxlbjp0LC4uLk9iamVjdC5rZXlzKGspLmxlbmd0aCYme2VkOmt9LC4uLnZvaWQgMCE9PWQmJntfX2NkcDpkfX07cmV0dXJuIG0oImlkZW50aWZ5Ij09PXQ/djpoLGIpfWFzeW5jIGZ1bmN0aW9uIE8oKXthd2FpdCBmZXRjaChmLHttZXRob2Q6IkdFVCIsa2VlcGFsaXZlOiEwfSkuY2F0Y2goKCk9Pnt9KX1mdW5jdGlvbiBqKHQpe3JldHVybiB0LnBhdGhuYW1lPT09bmV3IFVSTChBKS5wYXRobmFtZX1mdW5jdGlvbiBUKHQpe2xldCBlPXQ/InN0cmluZyI9PXR5cGVvZiB0P25ldyBVUkwodCxsb2NhdGlvbi5vcmlnaW4pOm5ldyBVUkwodC5ocmVmKTpudWxsOyFlfHxqKGUpfHxlLmhhc2gmJmooZSl8fGIoKX1sZXQgQT1uKCksTD0oKT0+e3ZhciB0O3dpbmRvdy52YT1mdW5jdGlvbih0LGUpeyJiZWZvcmVTZW5kIj09PXQ/aT1lOiJldmVudCI9PT10P2UmJlMoZS5uYW1lLGUuZGF0YSx7Li4uZS5vcHRpb25zLF9fY2RwOmUuX19jZHB9KToicGFnZXZpZXciPT09dD9lJiYoZS5yb3V0ZSYmKGc9ZS5yb3V0ZSksZS5wYXRoJiYoeT1lLnBhdGgpLGIoe3dpdGhSZWZlcnJlcjpfLF9fY2RwOmUuX19jZHB9KSxfPSExKToiaWRlbnRpZnkiPT09dD9udWxsIT1lJiZlLnVzZXJJZCYmUigiaWRlbnRpZnkiLCJ1c2VySWQiLGUudXNlcklkLGUudHJhaXRzLGUuX19jZHApOiJncm91cCI9PT10P251bGwhPWUmJmUuZ3JvdXBJZCYmUigiZ3JvdXAiLCJncm91cElkIixlLmdyb3VwSWQsZS50cmFpdHMsZS5fX2NkcCk6InJlc2V0IiE9PXR8fG8oKSwiZW5hYmxlQ29va2llIj09PXQmJk8oKX0sbnVsbD09KHQ9d2luZG93LnZhcSl8fHQuZm9yRWFjaCgoW3QsZV0pPT57d2luZG93LnZhKHQsZSl9KX07KCgpPT57aWYod2luZG93LnZhaXx8KHdpbmRvdy52YWk9ITAsTCgpLHMuZGlzYWJsZUF1dG9UcmFjaykpcmV0dXJuO2Ioe3dpdGhSZWZlcnJlcjohMH0pO2xldCB0PWhpc3RvcnkucHVzaFN0YXRlLmJpbmQoaGlzdG9yeSk7aGlzdG9yeS5wdXNoU3RhdGU9ZnVuY3Rpb24oLi4uZSl7dCguLi5lKTt0cnl7VChlWzJdKSxBPW4oKX1jYXRjaChyKXt9fSx3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigicG9wc3RhdGUiLGZ1bmN0aW9uKCl7VChuKCkpLEE9bigpfSl9KSgpfSgpfSkoKX0pKCk7"></script>
 </body>
 </html>
