@@ -13,7 +13,8 @@
 <meta property="og:description" content="The full how-to behind every Mia pin: makeup, hairstyles, skincare, nails and outfits, from the first step to the finished look." />
 <meta property="og:image" content="https://beautydiariesbymia.vercel.app/assets/peachy-bronze-end.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="data:," />
+<link rel="icon" href="assets/img-108.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/img-108.svg" />
 <title>Beauty Diaries by Mia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,8 +49,14 @@
   /* slim functional nav */
   .nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;gap:18px;padding:10px 0}
-  .brand{font-family:"Playfair Display",serif;font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none;white-space:nowrap}
-  .brand em{color:var(--rose);font-style:italic}
+  .brand{display:inline-flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none;white-space:nowrap;flex:none}
+  .brand-mark{width:46px;height:46px;flex:none;display:block;filter:drop-shadow(0 4px 10px rgba(126,31,59,.16))}
+  .brand-text{display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-family:"Playfair Display",serif;font-weight:800;font-size:1.32rem;letter-spacing:.01em;color:var(--ink);line-height:1.05}
+  .brand-name em{color:var(--rose);font-style:italic;font-weight:700}
+  .brand-sub{display:flex;align-items:center;gap:7px;margin-top:4px;font-family:"Manrope",system-ui,sans-serif;font-size:.62rem;font-weight:800;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+  .brand-sub::before,.brand-sub::after{content:"";height:1px;width:16px;background:linear-gradient(90deg,transparent,var(--gold));flex:none}
+  .brand-sub::after{background:linear-gradient(90deg,var(--gold),transparent)}
   .nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
   .nav-links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem;padding:10px 12px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center;transition:background .18s ease,color .18s ease}
   .nav-links a:hover{background:var(--rose-tint);color:var(--rose)}
@@ -271,7 +278,11 @@
     .gallery{grid-template-columns:1fr}
     .gal-side{grid-template-columns:1fr 1fr}
     .nav-links a{padding:10px 8px;font-size:.86rem}
-    .brand{font-size:1.08rem}
+    .brand{gap:9px}
+    .brand-mark{width:40px;height:40px}
+    .brand-name{font-size:1.14rem}
+    .brand-sub{font-size:.56rem;letter-spacing:.3em}
+    .brand-sub::before,.brand-sub::after{width:12px}
     .hero{padding-top:34px}
     .cta-band .btn{margin-left:0}
   }
@@ -281,7 +292,7 @@
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#/">Beauty<em>diaries</em>bymia</a>
+    <a class="brand" href="#/" aria-label="Beauty Diaries by Mia — home"><img class="brand-mark" src="assets/img-108.svg" alt="" width="46" height="46" /><span class="brand-text"><span class="brand-name">Beauty <em>Diaries</em></span><span class="brand-sub">by Mia</span></span></a>
     <nav class="nav-links" aria-label="Site">
       <a href="#/" data-goto="search">Search</a>
       <a href="#/" data-goto="categories">Categories</a>
