@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://beautydiariesbymia.vercel.app/sitemap.xml
