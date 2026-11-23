@@ -1511,7 +1511,7 @@ function renderGrid(){
   grid.style.display = list.length ? "" : "none";
   document.getElementById("empty").classList.toggle("show", ARTICLES.length===0);
   document.getElementById("noResults").classList.toggle("show", list.length===0 && ARTICLES.length>0);
-  var st = document.getElementById("searchStatus"); var btn = document.getElementById("showMoreBtn"); var wrap = document.getElementById("showMoreWrap"); if (btn && wrap){ var remaining = list.length - shownCount; if (remaining > 0){ var next = Math.min(6, remaining); btn.textContent = "Show " + next + " more tutorial" + (next === 1 ? "" : "s") + " (" + remaining + " left)"; wrap.style.display = ""; } else { wrap.style.display = "none"; } }
+  var st = document.getElementById("searchStatus"); var btn = document.getElementById("showMoreBtn"); var wrap = document.getElementById("showMoreWrap"); if (btn && wrap){ var remaining = list.length - shownCount; if (remaining > 0){ btn.textContent = "Show more tutorials"; wrap.style.display = ""; } else { wrap.style.display = "none"; } }
   if (query){
     st.innerHTML = list.length
       ? "Tutorials matching “" + esc(query) + "” — see them right below."
