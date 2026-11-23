@@ -387,7 +387,7 @@
           <button type="button" class="chip" data-cat="party" aria-pressed="false">Party &amp; Date Night</button>
         </div>
       </div>
-      <div class="grid" id="grid"></div>
+      <div class="grid" id="grid"></div><div class="show-more-wrap" id="showMoreWrap" style="text-align:center;margin-top:22px"><button type="button" class="btn btn-rose" id="showMoreBtn">Show more tutorials</button></div>
       <div class="no-results" id="noResults">
         <h3>Nothing matches that — yet</h3>
         <p>Try a shorter word, a different category, or browse everything again.</p>
@@ -1461,7 +1461,7 @@ function renderCategories(){
 
 /* ---- search + category filtering for the tutorial grid ---- */
 var activeCat = "all";
-var query = "";
+var query = ""; var shownCount = 9;
 
 function matchesQuery(a){
   if (!query) return true;
@@ -1483,7 +1483,7 @@ function syncFilterUI(){
   });
 }
 function setCategory(key, scroll){
-  activeCat = key || "all";
+  activeCat = key || "all"; shownCount = 9;
   renderGrid();
   syncFilterUI();
   if (scroll){
@@ -1507,11 +1507,11 @@ function cardHTML(a){
 function renderGrid(){
   var list = filteredArticles();
   var grid = document.getElementById("grid");
-  grid.innerHTML = list.map(cardHTML).join("");
+  grid.innerHTML = list.slice(0, shownCount).map(cardHTML).join("");
   grid.style.display = list.length ? "" : "none";
   document.getElementById("empty").classList.toggle("show", ARTICLES.length===0);
   document.getElementById("noResults").classList.toggle("show", list.length===0 && ARTICLES.length>0);
-  var st = document.getElementById("searchStatus");
+  var st = document.getElementById("searchStatus"); var btn = document.getElementById("showMoreBtn"); var wrap = document.getElementById("showMoreWrap"); if (btn && wrap){ var remaining = list.length - shownCount; if (remaining > 0){ var next = Math.min(6, remaining); btn.textContent = "Show " + next + " more tutorial" + (next === 1 ? "" : "s") + " (" + remaining + " left)"; wrap.style.display = ""; } else { wrap.style.display = "none"; } }
   if (query){
     st.innerHTML = list.length
       ? "Tutorials matching “" + esc(query) + "” — see them right below."
@@ -1706,19 +1706,19 @@ function scrollToTutorials(){
   if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
 }
 searchInput.addEventListener("input", function(){
-  query = searchInput.value.trim();
+  query = searchInput.value.trim(); shownCount = 9;
   renderGrid();
 });
 document.getElementById("searchForm").addEventListener("submit", function(e){
   e.preventDefault();
-  query = searchInput.value.trim();
+  query = searchInput.value.trim(); shownCount = 9;
   renderGrid();
   scrollToTutorials();
 });
 document.querySelectorAll(".pop").forEach(function(p){
   p.addEventListener("click", function(){
     searchInput.value = p.getAttribute("data-q");
-    query = searchInput.value.trim();
+    query = searchInput.value.trim(); shownCount = 9;
     renderGrid();
     scrollToTutorials();
   });
@@ -1732,7 +1732,7 @@ document.getElementById("clearFilters").addEventListener("click", function(){
   setCategory("all", false);
 });
 
-renderCategories();
+document.getElementById("showMoreBtn").addEventListener("click", function(){ shownCount += 6; renderGrid(); }); renderCategories();
 renderGrid();
 syncFilterUI();
 renderBoards();
