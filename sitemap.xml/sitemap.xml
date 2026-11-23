@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Tutorial URLs use hash routing #/look/<id> and are not separate crawlable pages -->
+  <url>
+    <loc>https://beautydiariesbymia.vercel.app/</loc>
+  </url>
+</urlset>
